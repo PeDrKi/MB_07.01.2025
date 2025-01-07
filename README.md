@@ -3,4 +3,4 @@
 
 ## RESULT
 
-![PICTURE](ScreenShot_.jpg)
+![PICTURE](ScreenShot.jpg)
