@@ -1,8 +1,19 @@
 import React, { useState } from 'react';
-import {View,  Text,  StyleSheet,  TextInput,  SafeAreaView,  KeyboardAvoidingView,  Platform,  TouchableWithoutFeedback,  Keyboard,  TouchableOpacity,  Alert,} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  SafeAreaView,
+  KeyboardAvoidingView,
+  Platform,
+  TouchableWithoutFeedback,
+  Keyboard,
+  TouchableOpacity,
+  Alert,
+} from 'react-native';
 
-const Header = () => 
-(
+const Header = () => (
   <View style={styles.header}>
     <Text style={styles.headerText}>Đăng nhập</Text>
   </View>
@@ -42,13 +53,13 @@ const App = () => {
             onFocus={() => console.log('TextInput Focused')}
             maxLength={15}
           />
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.button} onPress={handleLogin}>
+              <Text style={styles.buttonText}>Tiếp tục</Text>
+            </TouchableOpacity>
+          </View>
         </SafeAreaView>
       </TouchableWithoutFeedback>
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={handleLogin}>
-          <Text style={styles.buttonText}>Tiếp tục</Text>
-        </TouchableOpacity>
-      </View>
     </KeyboardAvoidingView>
   );
 };
@@ -102,11 +113,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     fontSize: 16,
     color: '#495057',
+    marginBottom: 20,
   },
   buttonContainer: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    backgroundColor: '#f8f9fa',
+    marginTop: 20,
   },
   button: {
     backgroundColor: '#007bff',
